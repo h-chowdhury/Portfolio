@@ -1,0 +1,626 @@
+/* ========================================
+   General Styles
+   ======================================== */
+
+body {
+  background: linear-gradient(to bottom, #282a39, #2a6978);
+}
+
+.content-box {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.8em;
+  background-color: #F5F5F5;
+  padding: 2em;
+  margin: 3em 5em;
+  border-radius: 1em;
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.5));
+  transition: all 0.5s ease-in-out;
+}
+
+.content-box:hover {
+  transform: scale(1.025);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.page-title .content-box {
+  margin-bottom: 0em;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-section, footer {
+  background-color: #292b32;
+}
+
+.navbar-section, .navbar a, #welcome-section h1, button, footer {
+  color: #F5F5F5;
+}
+
+
+
+/* ========================================
+   Header Styles
+   ======================================== */
+
+h1, h2 {
+  font-size: 1.2em;
+  font-weight: 600;
+  text-align: center;
+}
+
+h2 {
+  text-align: left !important;
+}
+
+#navbar-section h1 {
+  font-size: 0.6em;
+}
+
+div.page-title > div > header > h1, 
+header > h1, 
+h3, 
+legend {
+  font-weight: 600;
+}
+
+
+
+/* ========================================
+   Text Styles
+   ======================================== */
+
+* {
+  font-family: "Montserrat";
+}
+
+.bold-italic {
+  font-weight: bold;
+  font-style: italic;
+}
+
+ul {
+  list-style-type: square;
+  margin-top: 0;
+}
+
+p, li {
+  font-size: 0.9em;
+}
+
+li {
+  margin: 1em;
+}
+
+.line-break {
+  border-color: #2CA4B3;
+  margin: 2em 5em;
+}
+
+.page-title .line-break {
+  margin-bottom: 0em;
+}
+
+.accent-text {
+  font-weight:600;
+  color: #2a6978;
+}
+
+
+
+/* ========================================
+   Button Styles
+   ======================================== */
+
+button {
+  background-color: #2CA4B3;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: center;
+  border-style: solid;
+  border-color: #2CA4B3;
+  border-radius: 1em;
+  width: 12em;
+  height: 2.5em;
+  margin-top: 2em;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #27919f;
+  border: solid 2pt white;
+  transform: scale(1.1);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.372);
+}
+
+button:active {
+  box-shadow: none;
+}
+
+
+
+/* ========================================
+   Image Styles
+   ======================================== */
+
+img {
+  border-radius: 1em;
+  height: auto;
+  max-width: 100%;      /* Ensures responsiveness - can't overflow container */
+}
+
+.smallicon {
+  width: 3em;
+  filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.5));
+}
+
+.largeicon {
+  width: 8em;
+}
+
+.medium-img {
+  width: 30em;
+}
+
+figcaption {
+  text-align: center;
+}
+
+.simple-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.simple-section-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+
+
+/* ========================================
+    Navbar Styles
+   ======================================== */
+
+.navbar-section {
+  grid-area: navbar-section;
+  display: grid;
+  grid-template-areas: 
+  'nav-logo header'
+  'nav nav';
+  align-items: center;
+}
+
+.navbar-section h1 {
+  grid-area: header;
+  display: flex;
+  justify-self: end;
+  font-weight: 600;
+  margin-right: 1em;
+  filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.2));
+}
+
+.navbar-section .smallicon {
+  margin: 0.5em;
+}
+
+.navbar {
+  grid-area: nav;
+  display: flex;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  padding: 1em;
+  transition: all 0.5s ease-in-out;
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.3));
+}
+
+.navbar ul {
+  margin: 0em;
+  padding-left: 0em;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.navbar li{
+  font-weight: bold;
+  display: inline;
+  margin: 0em;
+}
+
+.navbar a:hover {
+  background-color: #464954;
+  border-bottom: solid 2pt #2CA4B3;
+  margin-bottom: -1.5em;
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.3));
+}
+
+.navbar a:active {
+  filter: none;
+}
+
+
+
+/* ========================================
+   Contacts Section Styles
+   ======================================== */
+
+#contacts-section {
+  margin-top: 1em;
+  text-align: center;
+}
+
+.contacts ul{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  'contact-email contact-linkedin contact-github contact-telephone' ;
+  list-style: none;
+}
+
+#contact-icon {
+  height: 3em;
+  transition: all 0.25s ease-in-out;
+}
+
+#contact-icon:hover {
+  transform: scale(1.3);
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.7));
+}
+
+#contact-email {grid-area: contact-email;}
+#contact-linkedin {grid-area: contact-linkedin;}
+#contact-github {grid-area: contact-github;}
+#contact-telephone {grid-area: contact-telephone;}
+
+
+
+/* ========================================
+    Home Page Styles
+   ======================================== */
+
+#home-page {
+  display: grid; 
+  grid-template-areas:
+  'navbar-section'
+  'logo'
+  'welcome-section'
+  'contacts-section'
+  'footer';
+  gap: 5em;
+}
+
+#logo {
+  grid-area: logo;
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+}
+
+#welcome-section h1 {
+  font-size: 1.5em;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.5));
+}
+
+#welcome-section {grid-area: welcome-section;}
+#contacts-section {grid-area: contacts-section;}
+
+
+
+/* ========================================
+    About Me Page Styles
+   ======================================== */
+   
+#aboutme-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  'navbar-section navbar-section'
+  'about about'
+  'hobbies extracurricular'
+  'footer footer';
+}
+
+#about-section {grid-area: about;}
+#hobbies-section {grid-area: hobbies;}
+#extracurricular-section {grid-area: extracurricular;}
+
+#about-section .content-box {
+  margin-bottom: 0em;
+}
+
+#hobbies-section .content-box, #extracurricular-section .content-box {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  margin-top: 3em;
+}
+
+#hobbies-section .content-box {
+  margin-right: 1.5em;
+  padding: 2.5em 2em;
+}
+
+#extracurricular-section .content-box {
+  margin-left: 1.5em;
+}
+
+#hobbies-section ul, #extracurricular-section ul {
+  border-left: solid 1.75pt #2CA4B3;
+  margin-left: 2em;
+  margin-bottom: 0em;
+}
+
+#hobbies-section header, #extracurricular-section header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#aboutme-page h3 {
+  text-align: center;
+}
+
+
+/* Article Styles */
+
+#aboutme-page article {
+  grid-area: about-article;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'about-img about-text';
+  align-items: center;
+  gap: 5em;
+}
+
+#about-img {
+  grid-area: about-img;
+  width: 100%;
+  height: auto;
+}
+
+#about-text {
+  grid-area: about-text;
+  text-align: center;
+}
+
+#about-text p {
+  padding-bottom: 2em;
+}
+
+
+
+/* ========================================
+    Skills Page Styles
+   ======================================== */
+
+#skills-page {
+  display: grid;
+  grid-template-areas:
+  'navbar-section navbar-section'
+  'page-title page-title'
+  'g-skills g-skills'
+  't-skills t-skills'
+  'side side'
+  'footer footer';
+}
+
+#skills-page .page-title {grid-area: page-title;}
+#general-skills-section {grid-area: g-skills;}
+#technical-skills-section {grid-area: t-skills;}
+
+#general-skills-section .content-box, #technical-skills-section .content-box {
+  margin-top: 3em;
+}
+
+#general-skills-section .content-box {
+  margin-bottom: 0em;
+}
+
+#side-section {
+  grid-area: side;
+  display: flex;
+  flex-direction: column;
+}
+
+#side-section .content-box {
+  background-color: #292b32;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex: 1;               /* Content grows to fill available space */
+  align-items: center;
+  margin: 1.5em 5em;
+  padding: 1em;
+}
+
+#side-section > :first-child {
+  margin-top: 0em;
+}
+
+#side-section > :last-child {
+  margin-bottom: 5em;
+}
+
+#side-section header {
+  flex: 0 0 5em;  /* 0 grow, 0 shrink, fixed width 5em */
+}
+
+#side-section ul {
+  border-left: solid 1.75pt #2CA4B3;
+  margin-left: 2em;
+}
+
+
+
+/* ========================================
+    Education Page Styles
+   ======================================== */
+
+#education-page {
+  display: grid;
+  grid-template-areas:
+  'navbar-section'
+  'page-title'
+  'education'
+  'footer';
+}
+
+#education-page .page-title {grid-area: page-title;}
+
+#education-section {
+  grid-area: education;
+  display: flex;
+  flex-direction: column;
+}
+
+#education-section .content-box {
+  margin-top: 3em;
+}
+
+#education-section > :first-child {
+  margin-bottom: 0em;
+}
+
+#education-section > :last-child {
+  margin-bottom: 6em;
+}
+
+#education-section img {
+  display: flex;
+  justify-self: center;
+}
+
+
+
+/* ========================================
+    Experience Page Styles
+   ======================================== */
+
+#experience-page {
+  display: grid;
+  grid-template-areas:
+  'navbar-section'
+  'page-title'
+  'experience'
+  'footer';
+}
+
+#experience-page .page-title {grid-area: page-title;}
+
+#experience-section {
+  grid-area: experience;
+  display: flex;
+  flex-direction: column;
+}
+
+#experience-section .content-box {
+  margin-top: 3em;
+}
+
+#experience-section > :first-child {
+  margin-bottom: 0em;
+}
+
+#experience-section > :last-child {
+  margin-bottom: 6em;
+}
+
+#experience-section img {
+  display: flex;
+  justify-self: center;
+}
+
+
+
+/* ========================================
+    Project Page Styles
+   ======================================== */
+
+#projects-page {
+  display: grid;
+  grid-template-areas: 
+  'navbar-section'
+  'page-title'
+  'project-1'
+  'project-2'
+  'project-3'
+  'project-4'
+  'project-5'
+  'footer';
+}
+
+#projects-page .content-box {
+  margin: 1.5em 5em;
+}
+
+#projects-page .page-title {
+  grid-area: page-title;
+  margin-top: 1.5em;
+}
+
+#projects-page .page-title {grid-area: page-title;}
+#project-section-1 {grid-area: project-1;}
+#project-section-2 {grid-area: project-2;}
+#project-section-3 {grid-area: project-3;}
+#project-section-4 {grid-area: project-4;}
+#project-section-5 {
+  grid-area: project-5; 
+  margin-bottom: 5em;
+}
+
+
+/* Article Styles */
+
+.project-article {
+  display: grid;
+  grid-template-areas:
+  'project-text'
+  'project-fig';
+  gap: 2em;
+  align-items: center;
+}
+
+.project-text {
+  grid-area: project-text;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.project-article .project-fig {
+  grid-area: project-fig;
+  display: grid;
+  grid-template-rows: auto, auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 1em;
+}
+
+.project-article .project-fig figcaption {
+  grid-column: span 3;
+}
+  
+
+/* ========================================
+    Footer Styles
+   ======================================== */
+
+footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+  padding: 1em;
+}
