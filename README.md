@@ -1,6 +1,6 @@
 # My Portfolio
 
-🌐 [View Live Portfolio](https://h-chowdhury.github.io/Portfolio/index.html)
+🌐 [View Live Portfolio](https://h-chowdhury.github.io/Portfolio/)
 
 ![image](https://github.com/user-attachments/assets/1530461b-0d1a-40d8-b53a-befe4d350942)
 
