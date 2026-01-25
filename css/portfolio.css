@@ -470,6 +470,13 @@ figcaption {
   margin-left: 1.5em;
 }
 
+#modules-list {
+  display:flex;
+}
+
+#modules-list ul{
+  padding-left: 0em;
+}
 
 
 /* ========================================
@@ -489,20 +496,26 @@ figcaption {
 
 #experience-section {
   grid-area: experience;
-  grid-template-columns: 1fr 1fr;
-  display: grid;
+  display: flex;
+  flex-direction: column;
 }
 
 #experience-section .content-box {
   margin-top: 3em;
+  margin-bottom: 0em;
 }
 
 #experience-section > :first-child {
-  margin-right: 1.5em;
+  margin-bottom: 0em;
 }
 
 #experience-section > :last-child {
-  margin-left: 1.5em;
+  margin-bottom: 6em;
+}
+
+#experience-section img {
+  display: flex;
+  justify-self: center;
 }
 
 
