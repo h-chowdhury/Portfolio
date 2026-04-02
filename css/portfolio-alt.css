@@ -507,6 +507,10 @@ figcaption {
   justify-self: center;
 }
 
+.moduleDesc {
+  list-style-type: none;
+}
+
 
 
 /* ========================================
