@@ -54,7 +54,6 @@ h2 {
 }
 
 
-
 /* ========================================
    Text Styles
    ======================================== */
@@ -478,6 +477,10 @@ figcaption {
   padding-left: 0em;
 }
 
+.moduleDesc {
+  list-style-type: none;
+}
+
 
 /* ========================================
     Experience Page Styles
@@ -529,12 +532,7 @@ figcaption {
   grid-template-areas: 
   'navbar-section'
   'page-title'
-  'project-1'
-  'project-2'
-  'project-3'
-  'project-4'
-  'project-5'
-  'project-6'
+  'project-section'
   'footer';
 }
 
@@ -543,14 +541,15 @@ figcaption {
 }
 
 #projects-page .page-title {grid-area: page-title;}
-#project-section-1 {grid-area: project-1;}
-#project-section-2 {grid-area: project-2;}
-#project-section-3 {grid-area: project-3;}
-#project-section-4 {grid-area: project-4;}
-#project-section-5 {grid-area: project-5;}
-#project-section-6 {
-  grid-area: project-6; 
-  margin-bottom: 5em;
+#project-section {
+  grid-area: project-section;
+  display: flex;
+  flex-direction: column;
+  gap: 0em;
+}
+
+#project-section > div:nth-child(7) {
+  margin-bottom: 7em;
 }
 
 
@@ -570,6 +569,13 @@ figcaption {
   display: flex;
   flex-direction: column;
   gap: 1em;
+}
+
+.tools-text {
+  color: grey;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
 }
 
 .project-article .project-fig {
