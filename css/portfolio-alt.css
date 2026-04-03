@@ -353,12 +353,12 @@ figcaption {
 
 #hobbies-section .content-box {
   margin-right: 1.5em;
-  /* padding: 2.5em 2em; */
+  /* padding: 2.5em 2em;  */
 }
 
 #extracurricular-section .content-box {
   margin-left: 1.5em;
-  padding: 0em;
+
 }
 
 #hobbies-section ul, #extracurricular-section ul {
